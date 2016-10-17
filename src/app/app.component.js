@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-	selector: "my-app",
-	template: '<h1>My First Angular 2 App</h1>'
+	selector: 'todo-app',
+	templateUrl: 'app/app.component.html',
+	styleUrls: ['app/app.component.css']
 })
-
 export class AppComponent {
-  constructor(){}
+	constructor() {
+		this.title = 'Angular2: Simple TodoList';
+		this.todos = [];
+	}
+
+	addTodo(input) {
+		let title = input.value;
+		input.value = '';
+		this.todos.push(title);
+	}
 }

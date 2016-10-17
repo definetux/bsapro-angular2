@@ -1,0 +1,29 @@
+<nav class="ui attached menu">
+	<div class="ui container">
+		<div class="header item">
+			<h1>{{ title }}</h1>
+		</div>
+	</div>
+</nav>
+
+<div class="ui text container">
+	<div class="ui segment form">
+		<div class="ui fluid action input">
+			<input type="text" name="title" placeholder="Add todo..." #titleInput>
+			<button type="button" class="ui primary button" (click)="addTodo(titleInput)">Add</button>
+		</div>
+	</div>
+
+	<div class="ui raised segment" *ngIf="todos.length > 0">
+		<div id="todos" class="ui middle aligned divided selection list">
+			<div class="todo item" *ngFor="let todo of todos">
+				<div class="ui checkbox">
+					<input type="checkbox">
+					<label>{{ todo }}</label>
+				</div>
+
+				<button type="button" class="ui red icon button"><i class="trash outline icon"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
