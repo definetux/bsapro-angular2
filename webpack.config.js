@@ -21,7 +21,8 @@ let entry = {
   'vendor': './app/vendor.js'
 };
 let output = {
-  path: './dist',
+  path: __dirname + '/dist',
+  publicPath: '/',
   filename: '[name].bundle.js',
   sourceMapFilename: '[name].map',
   chunkFilename: '[id].chunk.js'
