@@ -22,11 +22,11 @@ var middleware = webpackMiddleware(compiler, {
   }
 });
 
+app.use(middleware);
+
 app.get('*', function response(req, res) {
 	res.sendFile(path.join(__dirname, 'src/index.html'));
  });
-
-app.use(middleware);
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
