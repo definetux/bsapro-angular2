@@ -1,3 +1,8 @@
 # bsapro-angular2
-npm install
-npm start
+## Running the Application
+
+1. Run `npm install` to install app dependencies
+
+1. Run `npm start` to build and run application
+
+1. Go to http://localhost:3000 in your browser
