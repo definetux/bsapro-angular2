@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'todo-list',
 	templateUrl: 'app/todo/todo-list/todo-list.component.html',
 	styleUrls: ['app/todo/todo-list/todo-list.component.css'],
-	inputs: ['todos'],
+	inputs: ['todos']
 })
 
 export class TodoListComponent {
+  //@Input() todos;
+
   constructor(){
   }
 
