@@ -17,4 +17,10 @@ export class AppComponent {
   	this.todos.push(todo);
   	this.logger.log(`Todo ${todo.title} added`);
   }
+  onItemsToggled(isChecked) {
+    this.todos.forEach(x => x.done = isChecked);
+  }
+  onDeletedAll() {
+    this.todos.length = 0;
+  }
 }

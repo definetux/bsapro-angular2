@@ -2,5 +2,8 @@
 	<div class="ui fluid action input">
 		<input type="text" name="title" placeholder="Add todo..." (keyup.enter)="addTodo(titleInput.value); titleInput.value = ''" #titleInput>
 		<button type="button" class="ui primary button" (click)="addTodo(titleInput.value);  titleInput.value = ''">Add</button>
+		<button type="button" class="ui green button" (click)="toggleItems()" [ngClass]="{hidden: allChecked}">Check All </button>
+		<button type="button" class="ui orange button" (click)="toggleItems()" [ngClass]="{hidden: !allChecked}">Uncheck All </button>
+		<button type="button" class="ui red button" (click)="deleteAll()">Delete All</button>
 	</div>
 </div>
