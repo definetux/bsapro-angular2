@@ -5,6 +5,7 @@ import { TodosService } from '../../shared/todos.service';
 @Component({
 	selector: 'todo-area',
 	templateUrl: 'app/todo/todo-area/todo-area.component.html',
+  styleUrls: ['app/todo/todo-area/todo-area.component.css'],
 	providers:  [ LoggerService, TodosService ]
 })
 

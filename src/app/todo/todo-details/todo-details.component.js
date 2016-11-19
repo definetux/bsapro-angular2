@@ -6,6 +6,7 @@ import { TodosService } from '../../shared/todos.service';
 @Component({
 	selector: 'todo-details',
 	templateUrl: 'app/todo/todo-details/todo-details.component.html',
+    styleUrls: ['app/todo/todo-details/todo-details.component.css'],
 	providers:  [TodosService]
 })
 
