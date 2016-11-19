@@ -1,6 +1,8 @@
 <div class="ui checkbox">
     <input type="checkbox" (change)="toggleDone()" [(ngModel)]="todo.done">
-    <label [ngClass]="{done: todo.done}">{{ todo.title }}</label>
+    <label [ngClass]="{done: todo.done}">
+        <a routerLink="/todo/{{todo.id}}" routerLinkActive="active" [ngClass]="{done: todo.done}">{{ todo.title }}</a>
+    </label>
 </div>
 
 <button type="button" class="ui red icon button" (click)="delete()"><i class="trash outline icon"></i></button>
